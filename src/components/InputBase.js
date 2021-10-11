@@ -8,8 +8,10 @@ function InputBase(props) {
     props.onChange(e.target.value);
   }
 
+  const inputValue = props.value || '';
+
   return (
-    <input onChange={handleChange} {...propsToPass} />
+    <input onChange={handleChange} value={inputValue} {...propsToPass} />
   );
 }
 
