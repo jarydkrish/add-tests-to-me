@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <InputNumeric value={numbericValue} onChange={setNumericValue} />
       <InputString value={stringValue} onChange={setStringValue} />
+      <span>learn react</span>
     </div>
   );
 }
