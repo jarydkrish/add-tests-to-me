@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
+import InputNumeric from './components/InputNumeric';
+import InputString from "./components/InputString";
 
 function App() {
+  const [numbericValue, setNumericValue] = useState(null);
+  const [stringValue, setStringValue] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InputNumeric value={numbericValue} onChange={setNumericValue} />
+      <InputString value={stringValue} onChange={setStringValue} />
     </div>
   );
 }
